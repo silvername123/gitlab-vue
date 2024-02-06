@@ -20,9 +20,13 @@ stages: # List of stages for jobs, and their order of execution
   - test
   - deploy
 
+install-job: 
+  stage: install
+  image: node:latest
+  script:
+    - yarn
 build-job: # This job runs in the build stage, which runs first.
   stage: build
-  image: node:latest
   script:
     - echo "Compiling the code..."
     - echo "Compile complete."
