@@ -23,7 +23,7 @@ stages: # List of stages for jobs, and their order of execution
 
 install-job: 
   stage: install
-  image: node:latest
+  image: node:18.17.0
   script:
     - yarn
 
